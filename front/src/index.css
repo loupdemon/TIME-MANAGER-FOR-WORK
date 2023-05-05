@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#app {
+    margin: 0;
+    height: 100%;
+}
+
+#app {
+    @apply bg-gray-100
+}
+
+.app-button {
+    @apply my-1 mx-2 font-bold py-1 px-2 rounded ease-linear transition-all duration-150
+}
+
+/*.main__container {
+    @apply mx-20 flex flex-col bg-white px-10 py-5 my-10 rounded-lg shadow-md
+}*/
+
+.view-title {
+    @apply text-3xl font-bold my-5 mr-3
+}
+
+.sidebar__container {
+    height: 100%;
+}
+
+.navbar__container {
+    @apply sticky top-0 z-50 flex-1 flex flex-col py-5 px-20 justify-center items-center shadow-md bg-gray-800
+}
+
+.navbar__container span {
+    @apply text-white font-bold text-xl
+}
+
+.sidebar__container {
+    @apply sticky left-0 bg-gray-800 shadow-md flex-col flex
+}
+.sidebar__category {
+    @apply font-bold text-white ml-3 mt-5 mb-3
+}
+.sidebar__link {
+    @apply hover:bg-gray-500 text-white py-3 pl-5 text-sm
+}
+
+.userSidebar__container {
+    @apply flex flex-row items-center justify-between bg-gray-200 rounded-md py-2 m-2
+}
+
+.userSidebar__container img {
+    @apply mx-3
+}
+
+.userSidebar__logout {
+    @apply text-white text-sm bg-red-500 hover:bg-red-800 py-1 px-2 my-1 mx-2 rounded-md
+}
+
+.employees__container {
+    @apply bg-gray-100 flex flex-row items-center rounded-lg py-3 px-3 mb-4 shadow-sm justify-between
+}
+
+.employees__details {
+    @apply flex flex-row items-center
+}
+.employees__name {
+    @apply flex flex-col p-3 pr-10
+}
+
+.employees__role {
+    @apply flex flex-col justify-items-center p-3
+}
+
+.employees__team {
+    @apply flex flex-col justify-items-center
+}
+
+.employees__manage {
+    @apply flex flex-col justify-items-center
+}
+
+.employees__details__btn {
+    @apply hover:bg-blue-200 text-blue-500 font-semibold text-sm py-2 px-4 rounded
+}
+
+.employees__promote__btn {
+    @apply hover:bg-green-300 text-green-500 font-semibold text-sm py-2 px-4 rounded
+}
+
+.employees__modify__btn {
+    @apply hover:bg-yellow-200 text-yellow-500 font-semibold text-sm py-2 px-4 rounded
+}
+
+.employees__remove__btn {
+    @apply hover:bg-red-200 text-red-500 font-semibold text-sm py-2 px-4 rounded
+}
+
+.attendance__latest__container {
+    @apply flex flex-col my-5 justify-center items-center
+}
+
+.attendance__table__container {
+    @apply my-3 shadow overflow-hidden border-b border-gray-200 sm:rounded-lg
+}
+
+.attendance__table {
+    @apply min-w-full divide-y divide-gray-200
+}
+
+.attendance__thead {
+    @apply bg-gray-100
+}
+
+.attendance__th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider
+}
+
+.attendance__tbody {
+    @apply bg-white divide-y divide-gray-200
+}
+
+.attendance__td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-500
+}
+
+
+.userprofile__container {
+    @apply flex flex-row mr-5
+}
+
+.userprofile__input__container {
+    @apply flex flex-col mb-3
+}
+
+.userprofile__input__label {
+    @apply font-semibold
+}
+
+.userprofile__input {
+    @apply my-1 p-2 bg-gray-50 rounded-md text-sm
+}
+
+.userprofile__avatar {
+    @apply w-56 h-56 object-cover mr-5
+}
+
+.userprofile__current {
+    @apply flex flex-row mb-10 mr-10
+}
+
+.userprofile__curent__right {
+    @apply flex flex-col justify-between
+}
+
+.userprofile__modify {
+    @apply ml-10
+}
+
+.user__worked__hours__container {
+    @apply mr-10 px-5 py-3
+}
+
+.profile__top {
+    @apply flex flex-col
+}
+
+.profile__user__content {
+    @apply container mx-auto lg:gap-2 lg:grid lg:grid-cols-2
+}
+
+.profile__chart__container {
+    @apply grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 grid-rows-1
+
+}
+
+.employee_search__content{
+    @apply container mx-auto lg:gap-2 lg:grid lg:grid-cols-2
+
+}
+.employee_array__content{
+    @apply container mx-auto lg:gap-4 lg:grid lg:grid-cols-4
+
+}
+
+.home__chart__container {
+    @apply container mx-auto gap-3 lg:grid lg:grid-cols-3 md:grid-cols-2 md:grid
+
+}
+.home__chart__container__ii{
+    @apply container mx-auto lg:gap-2 lg:grid lg:grid-cols-2
+     
+
+}
+
+.home__chart__container__iii{
+    @apply container mx-auto lg:gap-2 lg:grid lg:grid-cols-2
+
+}
+.teamcharts__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.auth__container {
+    @apply mx-96
+}
+
+.login__container {
+    @apply bg-white flex flex-col px-28 pb-8 justify-center rounded-lg shadow-md
+}
+
+.login__content {
+    @apply flex flex-col
+}
+
+.login__input__container {
+    @apply flex flex-col mb-5
+}
+
+.login__input {
+    @apply border border-gray-600 rounded-sm px-2 py-1 text-sm text-gray-700
+}
+
+.login__label {
+    @apply font-semibold
+}
+.logoo__container {
+    @apply bg-white flex flex-col pb-8 justify-center rounded-lg shadow-md
+}

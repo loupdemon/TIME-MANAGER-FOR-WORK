@@ -1,0 +1,33 @@
+version : '3'
+services:
+  api:
+    image: registry.digitalocean.com/time-manager/api:latest
+    restart: always
+    # env_file:
+      # - ./api/.env
+    environment:
+      PGUSER: postgres
+      PGPASSWORD: admin
+      PGDATABASE: api_dev
+      PGPORT: 5432
+      PGHOST: db
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  front:
+    image: registry.digitalocean.com/time-manager/front:latest
+    ports:
+      - "8080:8080"
+  db:
+    image: registry.digitalocean.com/time-manager/db:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      PGDATA: /var/lib/postgresql/data/pgdata
+    restart: always
+    volumes:
+      - "/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"
+      - "dbdata:/var/lib/postgresql/data"
+volumes:
+  dbdata:
